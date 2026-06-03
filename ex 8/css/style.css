@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background-color: #c0392b;
+  color: white;
+  padding: 16px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 15px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+#btnMenu {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.hero {
+  text-align: center;
+  padding: 64px 32px;
+  background-color: #fff;
+}
+
+.hero h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 16px;
+  color: #666;
+}
+
+.secao {
+  padding: 60px 32px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cinza {
+  background-color: #f0f0f0;
+  max-width: 100%;
+  padding: 60px 32px;
+}
+
+.cinza form,
+.cinza .busca {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.secao h2 {
+  font-size: 26px;
+  margin-bottom: 24px;
+  color: #1a1a1a;
+}
+
+.busca {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.busca input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  min-width: 200px;
+}
+
+.busca input:focus {
+  border-color: #c0392b;
+  outline: none;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #c0392b;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #96281b;
+}
+
+.resultado {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 24px;
+  display: none;
+}
+
+.resultado.visivel {
+  display: block;
+}
+
+.resultado h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #c0392b;
+}
+
+.resultado p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.carregando {
+  color: #888;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.mensagem-erro {
+  color: #c0392b;
+  font-size: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+  margin-top: 8px;
+}
+
+input, textarea {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  width: 100%;
+}
+
+input:focus, textarea:focus {
+  border-color: #c0392b;
+  outline: none;
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.erro {
+  font-size: 13px;
+  color: #c0392b;
+  min-height: 16px;
+}
+
+form .btn {
+  margin-top: 12px;
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+}
+
+#sucesso {
+  color: green;
+  font-weight: bold;
+  margin-top: 12px;
+  text-align: center;
+}
+
+footer {
+  background-color: #1a1a1a;
+  color: #aaa;
+  text-align: center;
+  padding: 24px;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #96281b;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    padding: 16px 32px;
+    gap: 16px;
+    z-index: 10;
+  }
+
+  nav ul.aberto {
+    display: flex;
+  }
+
+  #btnMenu {
+    display: block;
+  }
+
+  .busca {
+    flex-direction: column;
+  }
+
+  .busca .btn {
+    width: 100%;
+  }
+}
