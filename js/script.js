@@ -108,9 +108,9 @@ btnCep.addEventListener("click", function() {
 
       resultadoCep.innerHTML =
         "<h3>CEP: " + dados.cep + "</h3>" +
-        "<p>📍 Logradouro: <strong>" + (dados.logradouro || "—") + "</strong></p>" +
-        "<p>🏘 Bairro: <strong>" + (dados.bairro || "—") + "</strong></p>" +
-        "<p>🏙 Cidade: <strong>" + dados.localidade + " - " + dados.uf + "</strong></p>";
+        "<p> Logradouro: <strong>" + (dados.logradouro || "—") + "</strong></p>" +
+        "<p> Bairro: <strong>" + (dados.bairro || "—") + "</strong></p>" +
+        "<p> Cidade: <strong>" + dados.localidade + " - " + dados.uf + "</strong></p>";
     })
     .catch(function() {
       resultadoCep.innerHTML = "<p class='mensagem-erro'>Erro ao buscar CEP. Verifique sua conexão.</p>";
